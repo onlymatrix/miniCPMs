@@ -1,1 +1,1 @@
-Repo for miniCPM series
+Repo for miniCPM series, use OpenVINO as backend.
