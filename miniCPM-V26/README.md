@@ -1,4 +1,4 @@
-# OpenVINO™ backend on MiniCPM-V
+# OpenVINO™ backend on MiniCPM-V26
 * Model: https://huggingface.co/openbmb/MiniCPM-V-2_6
 * Step 1. create python environment
 
