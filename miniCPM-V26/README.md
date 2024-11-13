@@ -12,9 +12,9 @@ pip install -r requirements.txt
 ``` sh
 python convert_minicpmV26.py -m /path/to/minicpmV26 -o /path/to/minicpmV26_ov
 ```
-<img src="./images/2.png"></img>
+<img src="./images/2.png" width="50%"></img>
 * Step3. Testing
 ``` sh
 python chat_minicpmV26.py -m /path/to/minicpmV26_ov -d "GPU"
 ```
-<img src="./images/1.png"></img>
+<img src="./images/1.png" width="50%"></img>
