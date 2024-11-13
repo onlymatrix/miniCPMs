@@ -8,7 +8,7 @@ conda activate ov_minicpm
 pip install -r requirements.txt
 ```
 
-* Step2. Convert minicpmV26 model to OpenVINO™ IR(Intermediate Representation). Be patient, it may takes some time.
+* Step2. Convert MiniCPM-1B-sft-bf16 model to OpenVINO™ IR(Intermediate Representation). Be patient, it may takes some time.
 ``` sh
 python convert_miniCPM1B.py -m /path/to/MiniCPM-1B-sft-bf16 -o /path/to/MiniCPM-1B-sft-bf16_ov
 ```
