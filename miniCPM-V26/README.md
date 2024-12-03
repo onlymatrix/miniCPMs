@@ -18,3 +18,9 @@ python convert_minicpmV26.py -m /path/to/minicpmV26 -o /path/to/minicpmV26_ov
 python chat_minicpmV26.py -m /path/to/minicpmV26_ov -d "GPU"
 ```
 <img src="./images/1.png" width="50%"></img>
+
+* Step4. Testing width video
+``` sh
+python chat_minicpmV26_video.py -m /path/to/minicpmV26_ov -d "GPU"
+```
+<img src="./images/3.png" width="50%"></img>
