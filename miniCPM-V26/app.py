@@ -75,7 +75,18 @@ def create_multimodal_input(upload_image_disabled=False, upload_video_disabled=F
                                         upload_video_button_props={'label': 'Upload Video', 'disabled': upload_video_disabled, 'file_count': 'single'},
                                         submit_button_props={'label': 'Submit'})
 
-def make_demo_26(model):
+
+def calc_infer_times(buffer, tm_infer_list, loading_time):
+    if len(buffer) != 0 and len(tm_infer_list) > 1:
+            avg_token_latency = sum(tm_infer_list) / (len(tm_infer_list))
+            avg_token = (len(tm_infer_list)) / sum(tm_infer_list)
+            return buffer + (f"\n\nModel Loading Time:{loading_time:.2f} s, "
+                             f"First Token: {tm_infer_list[0]:.2f} s, "
+                             f"Tokens Per Second: {avg_token:.2f} tokens/s, "
+                             f"Average Token Latency: {avg_token_latency*1000:.2f} ms")
+    return buffer
+
+def make_demo_26(model, loading_time):
         
     def chat(img, msgs, ctx, params=None, vision_hidden_states=None):
         tokenizer = model.processor.tokenizer
@@ -280,10 +291,13 @@ def make_demo_26(model):
 
             for _char in gen:
                 _chat_bot[-1][1] += _char
+
                 _context[-1]["content"][0] += _char
                 yield (_chat_bot, _app_cfg)
             
             _app_cfg['ctx']=_context
+            # Add performance info
+            _chat_bot[-1][-1] = calc_infer_times(_chat_bot[-1][1], model.llm.llm_times, loading_time)
             yield (_chat_bot, _app_cfg)
 
 

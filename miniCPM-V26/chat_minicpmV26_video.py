@@ -898,7 +898,7 @@ if __name__ == '__main__':
     end = time.perf_counter() - start
 
     #demo = make_demo(ov_model, end)
-    demo = make_demo_26(ov_model)
+    demo = make_demo_26(ov_model, end)
     try:
         demo.launch(debug=True, height=600)
     except Exception:
