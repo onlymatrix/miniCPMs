@@ -29,6 +29,6 @@ python convert_minincmp3-4B.py -m /path/to/minicpm3-4b -o /path/to/minicpm3-4b_o
 <img src="./images/1.png" width="50%"></img>
 # Step3. Testing
 ``` sh
-python chat_minicpm3-4B.py -m /path/to/inicpm3-4b_ov -d "CPU" # The demo can only use CPU. iGPU is not supported yet.
+python chat_minicpm3-4B.py -m /path/to/minicpm3-4b_ov -d "CPU" # The demo can only use CPU. iGPU is not supported yet.
 ```
 <img src="./images/2.png" width="50%"></img>
