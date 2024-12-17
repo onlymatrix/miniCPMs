@@ -3,7 +3,7 @@
 ``` sh
 Chat template for the current model is not supported by Jinja2Cpp. Please apply template manually to your prompt before calling generate. For example: <start_of_turn>user{user_prompt}<end_of_turn><start_of_turn>model
 ```
-* Solution when chat with converted model. Use this chat_minicpm3-4B-v2.py inside of chat_minicpm3-4B.py
+* Solution: When chat with converted model, use "chat_minicpm3-4B-v2.py" inside of "chat_minicpm3-4B.py"
 ``` sh
 python chat_minicpm3-4B-v2.py -m /path/to/minicpm3-4b_ov -d ( "CPU" or "GPU")
 ```
