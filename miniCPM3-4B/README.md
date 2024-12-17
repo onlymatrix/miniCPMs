@@ -1,5 +1,5 @@
 # 2024/12/17 Update
-* The following issues may arise when using chat_minicpm3-4B.py, which are caused by openvino-tokenizers.
+* The following issues may arise when using chat_minicpm3-4B.py, which are caused by OpenVINO GenAI's tokenizer part.
 ``` sh
 Chat template for the current model is not supported by Jinja2Cpp. Please apply template manually to your prompt before calling generate. For example: <start_of_turn>user{user_prompt}<end_of_turn><start_of_turn>model
 ```
