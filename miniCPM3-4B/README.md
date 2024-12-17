@@ -1,3 +1,13 @@
+# 2024/12/17 Update
+* The following issues may arise when using chat_minicpm3-4B.py, which are caused by openvino-tokenizers.
+``` sh
+Chat template for the current model is not supported by Jinja2Cpp. Please apply template manually to your prompt before calling generate. For example: <start_of_turn>user{user_prompt}<end_of_turn><start_of_turn>model
+```
+* Solution when chat with converted model. Use this chat_minicpm3-4B-v2.py inside of chat_minicpm3-4B.py
+``` sh
+python chat_minicpm3-4B-v2.py -m /path/to/minicpm3-4b_ov -d ( "CPU" or "GPU")
+```
+
 # OpenVINO™ backend on MiniCPM3-4B
 * Model: https://huggingface.co/openbmb/MiniCPM3-4B
 * OS: Windows 11
@@ -25,6 +35,6 @@ python convert_minincmp3-4B.py -m /path/to/minicpm3-4b -o /path/to/minicpm3-4b_o
 <img src="./images/1.png" width="50%"></img>
 # Step3. Testing
 ``` sh
-python chat_minicpm3-4B.py -m /path/to/inicpm3-4b_ov -d ( "CPU" or "GPU")
+python chat_minicpm3-4B.py -m /path/to/minicpm3-4b_ov -d ( "CPU" or "GPU")
 ```
 <img src="./images/2.png" width="50%"></img>
